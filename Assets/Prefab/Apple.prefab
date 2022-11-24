@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5779383454810746687}
   - component: {fileID: 4830738658027710141}
   - component: {fileID: 889993054}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,6 +179,10 @@ PrefabInstance:
     - target: {fileID: 797333578745588505, guid: 8184d9121d298fb40847158276327708, type: 3}
       propertyPath: m_Name
       value: Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 797333578745588505, guid: 8184d9121d298fb40847158276327708, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2423125965175598811, guid: 8184d9121d298fb40847158276327708, type: 3}
       propertyPath: m_RootOrder
