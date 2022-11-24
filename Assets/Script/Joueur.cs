@@ -87,6 +87,10 @@ public class Joueur : MonoBehaviour
                 numberOfJump++;
             }
         }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("CheckPoint"))
+        {
+            Debug.Log("Checkpoint");
+        }
 
 
     }
