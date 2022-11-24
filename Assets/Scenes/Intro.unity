@@ -582,7 +582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -717,7 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c025a183fb87c4485f5f1f54b6d963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Level_2
+  nextScene: Level_1
 --- !u!114 &1052716307
 MonoBehaviour:
   m_ObjectHideFlags: 0
