@@ -15,6 +15,7 @@ public class Joueur : MonoBehaviour
 
     private Animator anim;
     public GameObject menu;
+    public GameObject power;
     private Rigidbody2D rig;   
     private SpriteRenderer render;
 
@@ -62,6 +63,10 @@ public class Joueur : MonoBehaviour
                 Debug.Log("Pausing");
                 menu.SetActive(true);
             }
+            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                Instantiate(power, transform.position, Quaternion.identity);       
+            }
 
         }
     }
@@ -72,7 +77,7 @@ public class Joueur : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"));
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             Debug.Log("collision");
             if (numberOfJump == 0) 
