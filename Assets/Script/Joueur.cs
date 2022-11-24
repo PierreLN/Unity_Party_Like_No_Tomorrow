@@ -6,7 +6,10 @@ public class Joueur : MonoBehaviour
 {
     public float vitesse = 5.0f;
     public float jumpPower = 20.0f;
-    private int numberOfJump = 2;
+    private int numberOfJump = 0;
+
+    public GameObject menu;
+
 
     private Rigidbody2D rig;   
 
@@ -16,6 +19,7 @@ public class Joueur : MonoBehaviour
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        menu.SetActive(false);
     }
 
     private void Update()
@@ -31,6 +35,13 @@ public class Joueur : MonoBehaviour
                 Debug.Log(numberOfJump);
                 numberOfJump--;
             }
+            if (Input.GetButtonDown("pause")) 
+            {
+                Time.timeScale = 0.0f;
+                Debug.Log("Pausing");
+                menu.SetActive(true);
+            }
+
         }
     }
     private void FixedUpdate() 
@@ -43,8 +54,10 @@ public class Joueur : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"));
         {
             Debug.Log("collision");
-
-            numberOfJump++;
+            if (numberOfJump == 0) 
+            {
+                numberOfJump++;
+            }
         }
 
 
