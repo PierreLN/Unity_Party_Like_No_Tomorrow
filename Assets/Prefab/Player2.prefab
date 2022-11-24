@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1378250222
+--- !u!1 &1224706985
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1378250223}
-  - component: {fileID: 1378250225}
-  - component: {fileID: 1378250224}
+  - component: {fileID: 1224706988}
+  - component: {fileID: 1224706987}
+  - component: {fileID: 1224706986}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -18,31 +18,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1378250223
+--- !u!4 &1224706988
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378250222}
+  m_GameObject: {fileID: 1224706985}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05766025, y: -0.13102837, z: -10}
-  m_LocalScale: {x: 1.0207934, y: 0.85631955, z: 1}
+  m_LocalPosition: {x: -0.082663335, y: -0.28134778, z: -10}
+  m_LocalScale: {x: 1.2756729, y: 1.2526617, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8846240969027115527}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1378250225
+--- !u!20 &1224706987
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378250222}
+  m_GameObject: {fileID: 1224706985}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -68,21 +68,21 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
+  m_TargetEye: 0
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1378250224
+--- !u!81 &1224706986
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378250222}
+  m_GameObject: {fileID: 1224706985}
   m_Enabled: 1
 --- !u!1 &4188183748571305925
 GameObject:
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 492680285577711708}
   - component: {fileID: 8221582336594402582}
   - component: {fileID: 933462789}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ Transform:
   m_LocalScale: {x: 0.7839, y: 0.7983, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1378250223}
+  - {fileID: 1224706988}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
