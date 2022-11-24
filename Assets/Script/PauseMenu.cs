@@ -8,7 +8,6 @@ public class PauseMenu : MonoBehaviour
     public string firstScene;
     public GameObject menu;
 
-
     public void continueScene() 
     {
         Debug.Log("continue");
@@ -19,6 +18,7 @@ public class PauseMenu : MonoBehaviour
     public void backToIntro() 
     {
         SceneManager.LoadScene(firstScene);
+        Time.timeScale = 1.0f;
     }
 
 }
