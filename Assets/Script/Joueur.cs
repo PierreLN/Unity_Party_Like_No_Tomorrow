@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Joueur : MonoBehaviour
 {
-    public float vitesse = 5.0f;
-    public float jumpPower = 20.0f;
+    public float vitesse = 10.0f;
+    public float jumpPower = 40.0f;
     private int numberOfJump = 0;
 
     public GameObject menu;
