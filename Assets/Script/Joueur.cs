@@ -72,13 +72,17 @@ public class Joueur : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"));
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             Debug.Log("collision");
             if (numberOfJump == 0) 
             {
                 numberOfJump++;
             }
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("CheckPoint"))
+        {
+            Debug.Log("Checkpoint");
         }
 
 
