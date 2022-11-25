@@ -22,6 +22,7 @@ public class Joueur : MonoBehaviour
     Vector2 direction = new Vector2();
     private bool isControlable = true;
 
+
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -79,7 +80,8 @@ public class Joueur : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Deco")
-            || collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
+            || collision.gameObject.layer == LayerMask.NameToLayer("Wall")
+            || collision.gameObject.layer == LayerMask.NameToLayer("Blocks"))
         {
             Debug.Log("collision");
             if (numberOfJump == 0) 

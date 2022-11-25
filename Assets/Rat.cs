@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rat : MonoBehaviour
 {
@@ -153,7 +154,12 @@ public class Rat : MonoBehaviour
             deplacement = TRat.eMange;
             speed = 0f;
             rig.velocity = new Vector2(0f, 0f);
+            SceneManager.LoadScene("Level_2");
         }
-    }
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Power"))
+        {
+            Destroy(this.gameObject);
+        }
 
+    }
 }
