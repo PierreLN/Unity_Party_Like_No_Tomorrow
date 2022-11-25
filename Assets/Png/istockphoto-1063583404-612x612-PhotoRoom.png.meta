@@ -1,28 +1,7 @@
 fileFormatVersion: 2
-guid: 0b4768f2ab470f44ca33fa59836a0774
+guid: 4ba2f9d9482797f40a057410e1d5e299
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 6868122594974341346
-    second: Hit (32x32)_0
-  - first:
-      213: 7167584040609486739
-    second: Hit (32x32)_1
-  - first:
-      213: -1675461080110260169
-    second: Hit (32x32)_2
-  - first:
-      213: 8480664182131228983
-    second: Hit (32x32)_3
-  - first:
-      213: -953560442851353963
-    second: Hit (32x32)_4
-  - first:
-      213: -3450976776972242761
-    second: Hit (32x32)_5
-  - first:
-      213: 7062579536633761780
-    second: Hit (32x32)_6
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -65,10 +44,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 36
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,14 +62,14 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,19 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit (32x32)_0
+      name: istockphoto-1063583404-612x612-PhotoRoom_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 39
+        y: 84
+        width: 538
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a62336805af0d0849be23153a2f1537f
-      internalID: 6868122594974341346
+      spriteID: 60dff2cb122ccef4b943d3c51b4dcd75
+      internalID: -1395957271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_1
+      name: istockphoto-1063583404-612x612-PhotoRoom_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 443
+        y: 15
+        width: 15
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15e8a18ea1266f0448c53a598056808a
-      internalID: 7167584040609486739
+      spriteID: 22aee4e3040c9d6439acda3c239aa72b
+      internalID: -502543585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_2
+      name: istockphoto-1063583404-612x612-PhotoRoom_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 460
+        y: 15
+        width: 13
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e47310c939f1b3346a76d1517c54940d
-      internalID: -1675461080110260169
+      spriteID: 75dbf3f27650a4e4eaca417b295aafaa
+      internalID: -762426728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_3
+      name: istockphoto-1063583404-612x612-PhotoRoom_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 474
+        y: 15
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac2c9eb843ebe4a4481730bde3254529
-      internalID: 8480664182131228983
+      spriteID: 2711165d44a4899458dadc53eead3f2e
+      internalID: 1771076985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_4
+      name: istockphoto-1063583404-612x612-PhotoRoom_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 489
+        y: 15
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e8ab2736787bef41b301b11a2ba701c
-      internalID: -953560442851353963
+      spriteID: e07c7144cc241204c93e813a016d10fa
+      internalID: -1561233466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_5
+      name: istockphoto-1063583404-612x612-PhotoRoom_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
+        x: 500
+        y: 15
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cd1bccbf7378bd4797051abeb133f17
-      internalID: -3450976776972242761
+      spriteID: c3643568ccd108944b2f12e9ad8c6075
+      internalID: 312364094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_6
+      name: istockphoto-1063583404-612x612-PhotoRoom_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
+        x: 517
+        y: 15
+        width: 16
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,8 +244,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5999b75e91231254082dccfd02a68af1
-      internalID: 7062579536633761780
+      spriteID: c62595a30275b334393172b530f1c5b5
+      internalID: -938280016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: istockphoto-1063583404-612x612-PhotoRoom_7
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 15
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e519c13ada3b6a458e4dd0c004575cf
+      internalID: 1443226696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: istockphoto-1063583404-612x612-PhotoRoom_8
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 15
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87bcc85ee3f213644b43e4bafdb2191a
+      internalID: -1345430451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: istockphoto-1063583404-612x612-PhotoRoom_9
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 15
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5fbedf05f4656449ecb3723dca1851
+      internalID: 2011201493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: istockphoto-1063583404-612x612-PhotoRoom_10
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 24
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c266da5a4c37054fb4fdf118c960b94
+      internalID: 428610964
       vertices: []
       indices: 
       edges: []
@@ -294,13 +345,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit (32x32)_4: -953560442851353963
-      Hit (32x32)_5: -3450976776972242761
-      Hit (32x32)_2: -1675461080110260169
-      Hit (32x32)_3: 8480664182131228983
-      Hit (32x32)_6: 7062579536633761780
-      Hit (32x32)_1: 7167584040609486739
-      Hit (32x32)_0: 6868122594974341346
+      istockphoto-1063583404-612x612-PhotoRoom_6: -938280016
+      istockphoto-1063583404-612x612-PhotoRoom_1: -502543585
+      istockphoto-1063583404-612x612-PhotoRoom_8: -1345430451
+      istockphoto-1063583404-612x612-PhotoRoom_9: 2011201493
+      istockphoto-1063583404-612x612-PhotoRoom_5: 312364094
+      istockphoto-1063583404-612x612-PhotoRoom_10: 428610964
+      istockphoto-1063583404-612x612-PhotoRoom_2: -762426728
+      istockphoto-1063583404-612x612-PhotoRoom_7: 1443226696
+      istockphoto-1063583404-612x612-PhotoRoom_3: 1771076985
+      istockphoto-1063583404-612x612-PhotoRoom_4: -1561233466
+      istockphoto-1063583404-612x612-PhotoRoom_0: -1395957271
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
