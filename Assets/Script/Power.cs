@@ -21,7 +21,7 @@ public class Power : MonoBehaviour
     {
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate()  
     {
         rig.velocity = direction * speedPower;
     }
@@ -29,7 +29,7 @@ public class Power : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall")
-            || collision.gameObject.layer == LayerMask.NameToLayer("Enemie")) ;
+            || collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             Instantiate(powerSplash, transform.position, Quaternion.identity);
             Destroy(this.gameObject);   
