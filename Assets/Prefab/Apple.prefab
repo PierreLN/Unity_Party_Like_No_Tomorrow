@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1868479350788985790}
   - component: {fileID: 6321219287049099374}
   - component: {fileID: 5779383454810746687}
-  - component: {fileID: 4830738658027710141}
   - component: {fileID: 889993054}
-  m_Layer: 11
+  - component: {fileID: 7853663731916966310}
+  m_Layer: 13
   m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,19 +136,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
---- !u!114 &4830738658027710141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130818752741265490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2dd8de789414444f88abc563683f797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedPower: 5
 --- !u!95 &889993054
 Animator:
   serializedVersion: 4
@@ -169,6 +156,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7853663731916966310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130818752741265490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dd8de789414444f88abc563683f797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedPower: 5
+  powerSplash: {fileID: 1881800133165152579, guid: 5502260d87f5006409d70b5a0bd6283b, type: 3}
 --- !u!1001 &4180782136167659992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,7 +183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 797333578745588505, guid: 8184d9121d298fb40847158276327708, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2423125965175598811, guid: 8184d9121d298fb40847158276327708, type: 3}
       propertyPath: m_RootOrder

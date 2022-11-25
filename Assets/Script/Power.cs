@@ -8,6 +8,7 @@ public class Power : MonoBehaviour
     public float speedPower = 5.0f;
 
     private Vector2 direction = new Vector2();
+    public GameObject powerSplash;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class Power : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall")
             || collision.gameObject.layer == LayerMask.NameToLayer("Enemie")) ;
         {
+            Instantiate(powerSplash, transform.position, Quaternion.identity);
             Destroy(this.gameObject);   
         }
 
