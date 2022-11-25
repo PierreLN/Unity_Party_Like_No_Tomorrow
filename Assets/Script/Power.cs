@@ -21,7 +21,7 @@ public class Power : MonoBehaviour
     {
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate()  
     {
         rig.velocity = direction * speedPower;
     }
