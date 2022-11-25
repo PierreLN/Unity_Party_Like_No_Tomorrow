@@ -16,6 +16,7 @@ public class Rat : MonoBehaviour
     private Vector3 startPosition;
     private float distance;
 
+
     public enum TRat
     {
         eMange = 1,
