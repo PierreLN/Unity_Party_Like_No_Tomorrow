@@ -119,12 +119,12 @@ public class Joueur : MonoBehaviour
 
     void enleverVie(object data)
     {
-        vie = (int)data;
+        nbVie = (int)data;
     }
 
     void enleverMunition(object data)
     {
-        changeMunition = (int)data;
+        nbMunition = (int)data;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
