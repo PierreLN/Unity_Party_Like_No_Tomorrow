@@ -28,6 +28,7 @@ TagManager:
   - 
   - 
   - 
+  - blocks
   - 
   - 
   - 
@@ -35,8 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - end_game
   m_SortingLayers:
   - name: Background
     uniqueID: 1864672447

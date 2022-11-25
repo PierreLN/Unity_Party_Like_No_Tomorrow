@@ -38,7 +38,7 @@ public class Joueur : MonoBehaviour
         transform.position = respawn;
     }
 
-   
+
     private void Awake()
     {
         vie = new UnityAction<object>(enleverVie);
@@ -130,7 +130,8 @@ public class Joueur : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Deco")
-            || collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
+            || collision.gameObject.layer == LayerMask.NameToLayer("Wall")
+            || collision.gameObject.layer == LayerMask.NameToLayer("Blocks"))
         {
             Debug.Log("collision");
             if (numberOfJump == 0) 
