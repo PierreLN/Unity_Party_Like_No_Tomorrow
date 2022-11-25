@@ -26,6 +26,7 @@ public class ChuteScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(CReload());
+        Debug.Log("finale");
+        //StartCoroutine(CReload());
     }
 }

@@ -18,12 +18,22 @@ public class Joueur : MonoBehaviour
     public GameObject power;
     private Rigidbody2D rig;   
     private SpriteRenderer render;
+    private Vector3 respawn;
+    //private Vector3 oldPosition = new Vector3(0, 0, 0);
 
     Vector2 direction = new Vector2();
     private bool isControlable = true;
 
+    IEnumerator CRespawn()
+    {
+        Debug.Log(respawn);
+        yield return new WaitForSeconds(1);
+        transform.position = respawn;
+    }
+
     private void Start()
     {
+        respawn = transform.position;
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         render = GetComponent<SpriteRenderer>();
@@ -33,6 +43,10 @@ public class Joueur : MonoBehaviour
 
     private void Update()
     {
+        // Éventuellement calculer la vitesse
+        /*float speed = Vector3.Distance(oldPosition, transform.position);
+        oldPosition = transform.position;*/
+
         if (isControlable)
         {
             direction.x = Input.GetAxisRaw("Horizontal");
@@ -87,11 +101,21 @@ public class Joueur : MonoBehaviour
                 numberOfJump++;
             }
         }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("CheckPoint"))
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("EndOfWorld"))
         {
-            Debug.Log("Checkpoint");
+            Debug.Log("test");
+            StartCoroutine(CRespawn());
         }
 
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("CheckPoint"))
+        {
+            Debug.Log("Checkpoint");
+            respawn = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
+        }
     }
 }
