@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 // A faire
 
@@ -9,9 +10,15 @@ using UnityEngine;
 
 public class Joueur : MonoBehaviour
 {
-    public float vitesse = 7.0f;
+    public float vitesse = 10.0f;
     public float jumpPower = 40.0f;
     private int numberOfJump = 1;
+
+    private int nbVie = 3;
+    private int nbMunition = 10;
+
+    private UnityAction<object> vie;
+    private UnityAction<object> changeMunition;
 
     private Animator anim;
     public GameObject menu;
@@ -29,6 +36,26 @@ public class Joueur : MonoBehaviour
         Debug.Log(respawn);
         yield return new WaitForSeconds(1);
         transform.position = respawn;
+    }
+
+   
+    private void Awake()
+    {
+        vie = new UnityAction<object>(enleverVie);
+        changeMunition = new UnityAction<object>(enleverMunition);
+
+    }
+
+    private void OnEnable()
+    {
+        EventManager.StartListening("vie", vie);
+        EventManager.StartListening("munitionUtiliser", changeMunition);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.StopListening("vie", vie);
+        EventManager.StopListening("munitionUtiliser", changeMunition);
     }
 
     private void Start()
@@ -90,6 +117,16 @@ public class Joueur : MonoBehaviour
         
     }
 
+    void enleverVie(object data)
+    {
+        vie = (int)data;
+    }
+
+    void enleverMunition(object data)
+    {
+        changeMunition = (int)data;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Deco")
@@ -102,7 +139,7 @@ public class Joueur : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("EndOfWorld"))
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("EndOfWorld"))
         {
             Debug.Log("test");
             StartCoroutine(CRespawn());
