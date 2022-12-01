@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   msgBox: {fileID: 5821894313272695088}
-  nextScene: Level_2
+  fondu_intro: {fileID: 0}
 --- !u!1 &4597737133617138109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1044,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4597737133120223506}
     m_Modifications:
+    - target: {fileID: 3619363545556845370, guid: 218c949621aaf9a43b7cba42083d4d31, type: 3}
+      propertyPath: m_text
+      value: How about I play another round before the exam!
+      objectReference: {fileID: 0}
     - target: {fileID: 5156051266545653693, guid: 218c949621aaf9a43b7cba42083d4d31, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
