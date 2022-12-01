@@ -64,8 +64,8 @@ public class Joueur : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         render = GetComponent<SpriteRenderer>();
-
         menu.SetActive(false);
+
     }
 
     private void Update()
