@@ -25,8 +25,6 @@ public class Joueur : MonoBehaviour
     private SpriteRenderer render;
     private Vector3 respawn;
 
-    private int succes;
-
     private UnityAction<object> victoire;
     //private Vector3 oldPosition = new Vector3(0, 0, 0);
 
@@ -36,8 +34,10 @@ public class Joueur : MonoBehaviour
     IEnumerator CRespawn()
     {
         Debug.Log(respawn);
+        isControlable = false;
         yield return new WaitForSeconds(1);
         transform.position = respawn;
+        isControlable = true;
     }
 
     IEnumerator CReload()
@@ -52,6 +52,8 @@ public class Joueur : MonoBehaviour
         rig.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         yield return new WaitForSeconds(2.0f);
         rig.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("Level_2");
     }
 
     public void Awake()
@@ -152,7 +154,7 @@ public class Joueur : MonoBehaviour
             }
         }
 
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("EndOfWorld"))
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("EndOfWorld") || collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             if (nbVie > 0)
             {

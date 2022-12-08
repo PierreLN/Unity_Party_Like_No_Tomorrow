@@ -154,7 +154,7 @@ public class Rat : MonoBehaviour
             deplacement = TRat.eMange;
             speed = 0f;
             rig.velocity = new Vector2(0f, 0f);
-            SceneManager.LoadScene("Level_2");
+            //SceneManager.LoadScene("Level_2");
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Power"))
         {

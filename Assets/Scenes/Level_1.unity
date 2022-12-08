@@ -3562,27 +3562,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &2031711236 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1169257554190986209, guid: e05c57057c45faa47b5587462432ecf5, type: 3}
-  m_PrefabInstance: {fileID: 1169257553430519448}
-  m_PrefabAsset: {fileID: 0}
---- !u!70 &2031711243
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031711236}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.49241257, y: -0.49241853}
-  m_Size: {x: 0.48273468, y: 3.015163}
-  m_Direction: 0
 --- !u!1001 &2038960176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5630,14 +5609,6 @@ PrefabInstance:
     - target: {fileID: 1169257554190986209, guid: e05c57057c45faa47b5587462432ecf5, type: 3}
       propertyPath: m_Name
       value: Checkpoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 1169257554190986211, guid: e05c57057c45faa47b5587462432ecf5, type: 3}
-      propertyPath: m_SortingLayer
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1169257554190986211, guid: e05c57057c45faa47b5587462432ecf5, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1555983251
       objectReference: {fileID: 0}
     - target: {fileID: 1169257554190986212, guid: e05c57057c45faa47b5587462432ecf5, type: 3}
       propertyPath: m_RootOrder
