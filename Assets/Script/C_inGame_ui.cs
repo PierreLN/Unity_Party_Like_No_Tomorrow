@@ -11,7 +11,7 @@ public class C_inGame_ui : MonoBehaviour
 
     public TMPro.TextMeshProUGUI affichageVie;
     public TMPro.TextMeshProUGUI affichageMunition;
-    private UnityAction<object> explosion;
+    private UnityAction<object> changeMunition;
     private UnityAction<object> enleverVie;
 
     // Start is called before the first frame update
@@ -28,27 +28,31 @@ public class C_inGame_ui : MonoBehaviour
 
     private void Awake()
     {
-        explosion = new UnityAction<object>(calculerMunition);
+        changeMunition = new UnityAction<object>(calculerMunition);
+        enleverVie = new UnityAction<object>(calculerVie);
     }
 
     private void OnEnable()
     {
-        EventManager.StartListening("Boom", explosion);
+        EventManager.StartListening("vie", enleverVie);
+        EventManager.StartListening("munitionUtiliser", changeMunition);
     }
 
     private void OnDisable()
     {
-        EventManager.StopListening("Boom", explosion);
+        EventManager.StopListening("munitionUtiliser", changeMunition);
+        EventManager.StopListening("vie", enleverVie);
     }
 
     public void calculerMunition(object data)
     {
-        if (munition > 0)
-        {
-            munition--;
-            EventManager.TriggerEvent("munitionUtiliser", munition);
-        }
-
+        munition = (int)data;
         affichageMunition.text = munition.ToString();
+    }
+    
+    public void calculerVie(object data)
+    {
+        vie = (int)data;
+        affichageVie.text = vie.ToString();
     }
 }

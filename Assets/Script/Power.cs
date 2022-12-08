@@ -26,15 +26,26 @@ public class Power : MonoBehaviour
         rig.velocity = direction * speedPower;
     }
 
+    private void Explosion()
+    {
+        Instantiate(powerSplash, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall")
             || collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            Instantiate(powerSplash, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);   
+            Explosion();
+        } 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Boss"))
+        {
+            Explosion();
         }
-
-
     }
 }

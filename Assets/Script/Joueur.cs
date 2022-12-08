@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 // A faire
 
@@ -17,15 +18,16 @@ public class Joueur : MonoBehaviour
     private int nbVie = 3;
     private int nbMunition = 10;
 
-    private UnityAction<object> vie;
-    private UnityAction<object> changeMunition;
-
     private Animator anim;
     public GameObject menu;
     public GameObject power;
     private Rigidbody2D rig;   
     private SpriteRenderer render;
     private Vector3 respawn;
+
+    private int succes;
+
+    private UnityAction<object> victoire;
     //private Vector3 oldPosition = new Vector3(0, 0, 0);
 
     Vector2 direction = new Vector2();
@@ -38,24 +40,33 @@ public class Joueur : MonoBehaviour
         transform.position = respawn;
     }
 
-
-    private void Awake()
+    IEnumerator CReload()
     {
-        vie = new UnityAction<object>(enleverVie);
-        changeMunition = new UnityAction<object>(enleverMunition);
+        Scene scene = SceneManager.GetActiveScene();
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(scene.name);
+    }
 
+    IEnumerator CVictoire()
+    {
+        rig.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(2.0f);
+        rig.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+    }
+
+    public void Awake()
+    {
+        victoire = new UnityAction<object>(ScriptVictoire);
     }
 
     private void OnEnable()
     {
-        EventManager.StartListening("vie", vie);
-        EventManager.StartListening("munitionUtiliser", changeMunition);
+        EventManager.StartListening("victoire", victoire);
     }
 
     private void OnDisable()
     {
-        EventManager.StopListening("vie", vie);
-        EventManager.StopListening("munitionUtiliser", changeMunition);
+        EventManager.StopListening("victoire", victoire);
     }
 
     private void Start()
@@ -95,7 +106,7 @@ public class Joueur : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && numberOfJump > 0) 
             {
                 rig.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-                Debug.Log(numberOfJump);
+                //Debug.Log(numberOfJump);
                 numberOfJump--;
                 Debug.Log("Jumping");
             }
@@ -105,9 +116,11 @@ public class Joueur : MonoBehaviour
                 Debug.Log("Pausing");
                 menu.SetActive(true);
             }
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.KeypadEnter) && nbMunition > 0)
             {
-                Instantiate(power, transform.position, Quaternion.identity);       
+                Instantiate(power, transform.position, Quaternion.identity);
+                nbMunition--;
+                EventManager.TriggerEvent("munitionUtiliser", nbMunition);
             }
 
         }
@@ -117,14 +130,13 @@ public class Joueur : MonoBehaviour
         
     }
 
-    void enleverVie(object data)
+    private void ScriptVictoire(object data)
     {
-        nbVie = (int)data;
-    }
-
-    void enleverMunition(object data)
-    {
-        nbMunition = (int)data;
+        if ((bool)data)
+        {
+            isControlable = false;
+            StartCoroutine(CVictoire());
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -142,8 +154,17 @@ public class Joueur : MonoBehaviour
 
         else if (collision.gameObject.layer == LayerMask.NameToLayer("EndOfWorld"))
         {
-            Debug.Log("test");
-            StartCoroutine(CRespawn());
+            if (nbVie > 0)
+            {
+                nbVie--;
+                Debug.Log(nbVie);
+                EventManager.TriggerEvent("vie", nbVie);
+                StartCoroutine(CRespawn());
+            }
+            else
+            {
+                StartCoroutine(CReload());
+            }
         }
 
     }
