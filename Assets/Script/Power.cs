@@ -28,8 +28,9 @@ public class Power : MonoBehaviour
 
     private void Explosion()
     {
-        Instantiate(powerSplash, transform.position, Quaternion.identity);
+        GameObject clone = (GameObject)Instantiate (powerSplash, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
+        Destroy(clone, 1.0f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -116,7 +116,6 @@ public class Rat : MonoBehaviour
                     Debug.DrawLine(transform.position, frappe.point);
                     if (frappe.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
                     {
-                        // Réussir à indiquer au Lama qu'il doit rentrer avant de pourchasser le poulet
                         deplacement = TRat.eActif;
                         mouvement = direction;
                     }

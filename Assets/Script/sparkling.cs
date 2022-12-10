@@ -13,7 +13,9 @@ public class sparkling : MonoBehaviour
         {
             timer = Random.Range(1, 5);
             yield return new WaitForSeconds(timer);
-            Instantiate(sparklo, transform.position, Quaternion.identity);
+            GameObject clone = (GameObject)Instantiate(sparklo, transform.position, Quaternion.identity);
+            Destroy(clone, 1.0f);
+
         }
     }
     void Start()

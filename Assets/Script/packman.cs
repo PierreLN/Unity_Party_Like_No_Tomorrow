@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class packman : MonoBehaviour
 {
-    private float speed = 15.0f;
-    private string direction = "Gauche";
+    public float speed = 15.0f;
+    public string direction = "Gauche";
     private SpriteRenderer render;
 
 
