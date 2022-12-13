@@ -50,9 +50,9 @@ public class Joueur : MonoBehaviour
     IEnumerator CVictoire()
     {
         rig.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
         rig.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("Level_2");
     }
 

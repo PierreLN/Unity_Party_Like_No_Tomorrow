@@ -3776,9 +3776,25 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 113043002}
+    - target: {fileID: 933462789, guid: c3ae99566a2a0e340856c3a0c1789eb8, type: 3}
+      propertyPath: vitesse
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 933462789, guid: c3ae99566a2a0e340856c3a0c1789eb8, type: 3}
+      propertyPath: jumpPower
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1651934163, guid: c3ae99566a2a0e340856c3a0c1789eb8, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 492680285577711708, guid: c3ae99566a2a0e340856c3a0c1789eb8, type: 3}
+      propertyPath: m_LinearDrag
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 492680285577711708, guid: c3ae99566a2a0e340856c3a0c1789eb8, type: 3}
+      propertyPath: m_GravityScale
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4188183748571305925, guid: c3ae99566a2a0e340856c3a0c1789eb8, type: 3}
       propertyPath: m_Name
