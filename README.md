@@ -1,7 +1,7 @@
 # Unity_Party_Like_No_Tomorrow
 
 ## Déroulement du jeu
-Notre jeu est un jeu de plateforme ou un étudiant procrastinateur décide qu'il a suffisament de temps pour jouer encore une dernière partie avant de commencer ses travaux (niveau 1). Cependant, il se rend compte qu'ila joué trop longtemps et il doit maintenant courrir à l'UQAM remettre ses travaux de fin de session (niveau 2). Pas de chance, le métro est en panne! Il doit donc traverser les obstacles pour arriver à temps et pouvoir ensuite célébrer comme s'il n'y avait pas de lendemain sa graduation.
+Notre jeu est un jeu de plateforme ou un étudiant procrastinateur décide qu'il a suffisament de temps pour jouer encore une dernière partie avant de commencer ses travaux (niveau 1). Cependant, il se rend compte qu'il a joué trop longtemps et il doit maintenant courrir à l'UQAM remettre ses travaux de fin de session (niveau 2). Pas de chance, le métro est en panne! Il doit donc traverser les obstacles pour arriver à temps et pouvoir ensuite célébrer comme s'il n'y avait pas de lendemain sa graduation.
 
 ### créateur du jeu
 Maxence Guindon<br />
