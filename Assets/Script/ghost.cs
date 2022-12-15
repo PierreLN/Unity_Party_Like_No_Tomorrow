@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ghost : MonoBehaviour
 {
     private float speed = 2.0f;
     private string direction = "Gauche";
     private SpriteRenderer render;
+    private UnityAction<object> playerHit;
 
     IEnumerator CFlottant()
     {
@@ -16,6 +18,21 @@ public class ghost : MonoBehaviour
             transform.position -= new Vector3(0.0f, 0.1f, 0.0f);
             yield return new WaitForSeconds(0.3f);
         }
+    }
+
+    public void Awake()
+    {
+        playerHit = new UnityAction<object>(changeSpeed);
+    }
+
+    private void OnEnable()
+    {
+        EventManager.StartListening("PlayerHit", playerHit);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.StopListening("PlayerHit", playerHit);
     }
 
     // Start is called before the first frame update
@@ -80,6 +97,18 @@ public class ghost : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Power"))
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    void changeSpeed(object data)
+    {
+        if ((bool)data)
+        {
+            speed = 0.0f;
+        }
+        else
+        {
+            speed = 2.0f;
         }
     }
 

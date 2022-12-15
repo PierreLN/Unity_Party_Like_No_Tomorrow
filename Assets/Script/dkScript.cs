@@ -19,10 +19,8 @@ public class dkScript : MonoBehaviour
 
     IEnumerator CTirerBarril()
     {
-        Debug.Log("in");
         while (!anim.GetBool("Defeat") && vue)
         {
-            Debug.Log("defaite est false");
             anim.SetBool("Launch", true);
             yield return new WaitForSeconds(0.55f);
             anim.SetBool("Launch", false);

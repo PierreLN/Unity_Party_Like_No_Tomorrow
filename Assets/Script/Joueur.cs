@@ -24,6 +24,8 @@ public class Joueur : MonoBehaviour
     private Rigidbody2D rig;   
     private SpriteRenderer render;
     private Vector3 respawn;
+    private bool isJumping = false;
+    private bool hit = false;
 
     private UnityAction<object> victoire;
     //private Vector3 oldPosition = new Vector3(0, 0, 0);
@@ -33,11 +35,12 @@ public class Joueur : MonoBehaviour
 
     IEnumerator CRespawn()
     {
-        Debug.Log(respawn);
         isControlable = false;
         yield return new WaitForSeconds(1);
         transform.position = respawn;
         isControlable = true;
+        hit = false;
+        EventManager.TriggerEvent("PlayerHit", false);
     }
 
     IEnumerator CReload()
@@ -83,9 +86,6 @@ public class Joueur : MonoBehaviour
 
     private void Update()
     {
-        // Éventuellement calculer la vitesse
-        /*float speed = Vector3.Distance(oldPosition, transform.position);
-        oldPosition = transform.position;*/
 
         if (isControlable)
         {
@@ -100,36 +100,44 @@ public class Joueur : MonoBehaviour
                 render.flipX = false;
             }
 
-            rig.AddForce(new Vector2(direction.x * vitesse, 0.0f), ForceMode2D.Force);
-            
             anim.SetFloat("Horizontal", direction.x);
             anim.SetFloat("Speed", direction.sqrMagnitude);
 
-            if (Input.GetKeyDown(KeyCode.Space) && numberOfJump > 0) 
-            {
-                rig.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-                //Debug.Log(numberOfJump);
-                numberOfJump--;
-                Debug.Log("Jumping");
-            }
-            if (Input.GetButtonDown("pause")) 
+            if (Input.GetButtonDown("pause"))
             {
                 Time.timeScale = 0.0f;
-                Debug.Log("Pausing");
                 menu.SetActive(true);
             }
+
+            if (Input.GetKeyDown(KeyCode.Space) && numberOfJump > 0)
+            {
+                //Debug.Log(numberOfJump);
+                numberOfJump--;
+                isJumping = true;
+            }
+
             if (Input.GetKeyDown(KeyCode.KeypadEnter) && nbMunition > 0)
             {
                 Instantiate(power, transform.position, Quaternion.identity);
                 nbMunition--;
                 EventManager.TriggerEvent("munitionUtiliser", nbMunition);
             }
-
         }
     }
     private void FixedUpdate() 
     {
+
+        if (!hit)
+        {
+            rig.AddForce(new Vector2(direction.x * vitesse, 0.0f), ForceMode2D.Force);
+        }
+
         
+        if (isJumping)
+        {
+            rig.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            isJumping = false;
+        }
     }
 
     private void ScriptVictoire(object data)
@@ -158,9 +166,10 @@ public class Joueur : MonoBehaviour
         {
             if (nbVie > 0)
             {
-                nbVie--;
-                Debug.Log(nbVie);
+                if (!hit) nbVie--;
                 EventManager.TriggerEvent("vie", nbVie);
+                EventManager.TriggerEvent("PlayerHit", true);
+                hit = true; 
                 StartCoroutine(CRespawn());
             }
             else
@@ -175,7 +184,6 @@ public class Joueur : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("CheckPoint"))
         {
-            Debug.Log("Checkpoint");
             respawn = new Vector3(collision.transform.position.x, collision.transform.position.y, 0);
         }
     }

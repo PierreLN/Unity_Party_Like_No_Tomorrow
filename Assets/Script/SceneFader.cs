@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneFader : MonoBehaviour
 {
 	public SpriteRenderer fondu;
-	public float fadeSpeed = 0.001f;
+	public float fadeSpeed = 0.1f;
     public Color couleur;
 
 
@@ -17,7 +17,7 @@ public class SceneFader : MonoBehaviour
 	}
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         couleur.a -= fadeSpeed;
         fondu.color = couleur;

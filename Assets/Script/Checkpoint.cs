@@ -37,8 +37,6 @@ public class Checkpoint : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             StartCoroutine(CAnimation());
-
-            //anim.SetBool("Activated", true);
         }
     }
 
