@@ -89,12 +89,10 @@ public class packman : MonoBehaviour
         {
             cacheSpeed = speed;
             speed = 0.0f;
-            Debug.Log(speed);
         }
         else
         {
             speed = cacheSpeed;
-            Debug.Log(speed);
         }
     }
 }

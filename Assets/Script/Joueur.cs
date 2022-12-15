@@ -28,7 +28,6 @@ public class Joueur : MonoBehaviour
     private bool hit = false;
 
     private UnityAction<object> victoire;
-    //private Vector3 oldPosition = new Vector3(0, 0, 0);
 
     Vector2 direction = new Vector2();
     private bool isControlable = true;
@@ -111,7 +110,7 @@ public class Joueur : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space) && numberOfJump > 0)
             {
-                //Debug.Log(numberOfJump);
+
                 numberOfJump--;
                 isJumping = true;
             }
@@ -155,7 +154,7 @@ public class Joueur : MonoBehaviour
             || collision.gameObject.layer == LayerMask.NameToLayer("Wall")
             || collision.gameObject.layer == LayerMask.NameToLayer("Blocks"))
         {
-            Debug.Log("collision");
+
             if (numberOfJump == 0) 
             {
                 numberOfJump++;
@@ -166,9 +165,12 @@ public class Joueur : MonoBehaviour
         {
             if (nbVie > 0)
             {
-                if (!hit) nbVie--;
+                if (!hit)
+                {
+                    EventManager.TriggerEvent("PlayerHit", true);
+                    nbVie--;
+                }
                 EventManager.TriggerEvent("vie", nbVie);
-                EventManager.TriggerEvent("PlayerHit", true);
                 hit = true; 
                 StartCoroutine(CRespawn());
             }

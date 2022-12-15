@@ -3950,7 +3950,6 @@ GameObject:
   - component: {fileID: 2147263100}
   - component: {fileID: 2147263103}
   - component: {fileID: 2147263102}
-  - component: {fileID: 2147263101}
   m_Layer: 11
   m_Name: ChuteDetection
   m_TagString: Untagged
@@ -5750,18 +5749,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!114 &2147263101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2147263096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cad6db4984415b8449faa65752d6b650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!66 &2147263102
 CompositeCollider2D:
   m_ObjectHideFlags: 0
