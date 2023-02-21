@@ -115,7 +115,7 @@ public class Joueur : MonoBehaviour
                 isJumping = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.KeypadEnter) && nbMunition > 0)
+            if (Input.GetKeyDown(KeyCode.O) && nbMunition > 0)
             {
                 Instantiate(power, transform.position, Quaternion.identity);
                 nbMunition--;

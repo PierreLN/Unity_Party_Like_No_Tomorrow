@@ -435,7 +435,7 @@ TextureImporter:
       213: 4320056378629417345
     second: Terrain (16x16)_143
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -495,6 +495,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -3722,8 +3723,8 @@ TextureImporter:
       Terrain (16x16)_86: 2534797647697017659
       Terrain (16x16)_40: -1385159882611531606
       Terrain (16x16)_53: 510484679990689147
-      Terrain (16x16)_0: -4874278423985981231
       Terrain (16x16)_91: -1647121858502193189
+      Terrain (16x16)_0: -4874278423985981231
       Terrain (16x16)_74: -1652666043038260038
       Terrain (16x16)_102: -6233458931719022677
   spritePackingTag: 

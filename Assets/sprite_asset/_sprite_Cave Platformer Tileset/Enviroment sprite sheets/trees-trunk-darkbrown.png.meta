@@ -219,7 +219,7 @@ TextureImporter:
       213: 21300142
     second: trees-trunk-darkbrown_71
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -279,6 +279,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1887,10 +1888,10 @@ TextureImporter:
       trees-trunk-darkbrown_55: 21300110
       trees-trunk-darkbrown_19: 21300038
       trees-trunk-darkbrown_60: 21300120
-      trees-trunk-darkbrown_12: 21300024
+      trees-trunk-darkbrown_38: 21300076
       trees-trunk-darkbrown_28: 21300056
       trees-trunk-darkbrown_8: 21300016
-      trees-trunk-darkbrown_38: 21300076
+      trees-trunk-darkbrown_12: 21300024
       trees-trunk-darkbrown_65: 21300130
       trees-trunk-darkbrown_27: 21300054
       trees-trunk-darkbrown_48: 21300096

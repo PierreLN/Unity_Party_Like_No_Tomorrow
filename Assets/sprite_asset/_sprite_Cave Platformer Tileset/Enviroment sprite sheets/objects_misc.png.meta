@@ -51,7 +51,7 @@ TextureImporter:
       213: 21300030
     second: objects_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -111,6 +111,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -510,7 +511,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      objects_11: 21300022
+      objects_6: 21300012
       objects_1: 21300002
       objects_9: 21300018
       objects_3: 21300006
@@ -524,8 +525,8 @@ TextureImporter:
       objects_0: 21300000
       objects_12: 21300024
       objects_4: 21300008
-      objects_6: 21300012
       objects_7: 21300014
+      objects_11: 21300022
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
